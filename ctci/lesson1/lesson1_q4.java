@@ -1,6 +1,6 @@
 
 /**********************************************************************************
- * Interview Question 1.3
+ * Interview Question 1.4
  * 
  * Implement an algorithm to check if is a permutation of a palindrome Input:
  * Tact Coa Output: True (permutation:"taco cat", "atco cata", etc)

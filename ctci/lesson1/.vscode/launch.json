@@ -2,6 +2,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - lession1_q7",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "lession1_q7",
+            "args": ""
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - lesson1_q6",
             "request": "launch",
             "cwd": "${workspaceFolder}",
