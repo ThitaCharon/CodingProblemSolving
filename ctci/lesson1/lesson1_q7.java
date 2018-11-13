@@ -3,7 +3,7 @@ import com.sun.javafx.scene.paint.GradientUtils.Point;
 /**********************************************************************************
  * Interview Question 1.7
  * 
- * Implement an algorithm rotate the matrix
+ * Implement an algorithm rotate the matrix 
  *********************************************************************************/
 
 public class lesson1_q7 {
