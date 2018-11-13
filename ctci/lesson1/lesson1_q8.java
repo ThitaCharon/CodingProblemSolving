@@ -59,7 +59,7 @@ public class lesson1_q8 {
             }
         }
 
-        // check frist row and first column contain zero element
+        // check first row and first column contain zero element
         for (int col = 1; col < matrix[0].length; col++) {
             if (matrix[0][col] == 0) {
                 for (int row = 1; row < matrix.length; row++) {
