@@ -5,9 +5,12 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         ArrayStack arrStack = new ArrayStack(5);
+        System.out.println("~~ push ~~ ");
         arrStack.push(new Show("FOX"));
         arrStack.push(new Show("abc"));
         arrStack.printStack();
+        System.out.println("~~ peek ~~ ");
+        System.out.println(arrStack.peak().getTittle());
         System.out.println("Size is " + arrStack.size() + " Peak " + arrStack.peak().getTittle());
 
         arrStack.pop();
