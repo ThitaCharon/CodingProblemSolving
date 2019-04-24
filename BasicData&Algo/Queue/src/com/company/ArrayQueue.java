@@ -14,12 +14,23 @@ public class ArrayQueue {
     }
 
     public Movie addQueue(Movie newMovie){
-        if(last == moviesArr.length){
-            Movie [] resize = new Movie[moviesArr.length * 2];
-            System.arraycopy(moviesArr, 0 ,resize,0,moviesArr.length);
-            moviesArr = resize;
+        //if has to resize
+        if(size() == moviesArr.length-1){
+            int numItems = size();
+            Movie [] newArray = new Movie[moviesArr.length * 2];
+            System.out.println("Resize array");
+            System.arraycopy(moviesArr, front, newArray, 0, moviesArr.length-front);
+            System.arraycopy(moviesArr, 0 ,newArray,moviesArr.length-front,last);
+            moviesArr = newArray;
+            last = numItems;
         }
-        moviesArr[last++] = newMovie;
+        moviesArr[last] = newMovie;
+        //calculate last index
+        if(last < moviesArr.length-1){
+            last++;
+        }else {
+            last = 0;
+        }
         return newMovie;
     }
 
@@ -28,20 +39,27 @@ public class ArrayQueue {
             throw new NoSuchElementException();
         }
         Movie mRemove = moviesArr[front];
-        moviesArr[front++] = null;
+        moviesArr[front] = null;
+        front++;
         if(size() == 0){
             front = 0;
-            last = front;
+            last = 0;
+        }else if(front == moviesArr.length){
+            front = 0;
         }
         return mRemove;
     }
 
     public boolean isEmpty(){
-        return last == 0;
+        return size() == 0;
     }
 
     public int size(){
-        return last-front;
+        if(front<= last) {
+            return last - front;
+        }else{
+            return last-front + moviesArr.length;
+        }
     }
 
     public void printQueue(){
