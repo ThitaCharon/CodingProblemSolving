@@ -1,1 +1,1 @@
-# CodingProblemSolving
+# ProblemSolving
