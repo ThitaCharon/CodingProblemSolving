@@ -10,7 +10,6 @@ public class Main {
         mergeSort(arr, 0 , arr.length-1);
         printArray(arr);
     }
-
     public static void mergeSort(int [] a , int start, int end){
 
         if(start < end){
